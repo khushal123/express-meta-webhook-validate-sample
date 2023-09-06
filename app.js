@@ -21,7 +21,7 @@ app.post('/webhook', async (req, res) => {
     const data = req.body;
     try {
         // Replace with the URL of the API you want to call
-        const apiUrl = ' https://slow-doodles-sort.loca.lt/api/whatsapp/webhook';
+        const apiUrl = 'https://slow-doodles-sort.loca.lt/api/message/whatsapp/webhook';
 
         const apiResponse = await axios.post(apiUrl, data);
 
