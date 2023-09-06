@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const PORT = 6001;  // You can choose any port you like
+const port = process.env.PORT || 6001;  // You can choose any port you like
 
 const YOUR_VERIFY_TOKEN = 'mGIKzRBxY9xnwBp9Qra1fh';  // Replace this with your actual verification token
 
@@ -38,5 +38,5 @@ app.post('/webhook', async (req, res) => {
 
 
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`);
+    console.log(`Server is running on http://localhost:${port}`);
 });
