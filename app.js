@@ -4,6 +4,11 @@ const PORT = 3000;  // You can choose any port you like
 
 const YOUR_VERIFY_TOKEN = 'mGIKzRBxY9xnwBp9Qra1fh';  // Replace this with your actual verification token
 
+app.get('/', (req, res) => {
+    res.send("sample webhook")
+});
+
+
 app.get('/webhook', (req, res) => {
     if (req.query['hub.verify_token'] === YOUR_VERIFY_TOKEN) {
         res.send(req.query['hub.challenge']);
