@@ -4,7 +4,7 @@ const app = express();
 app.use(express.json())
 const port = process.env.PORT || 6001;  // You can choose any port you like
 
-const YOUR_VERIFY_TOKEN = 'mGIKzRBxY9xnwBp9Qra1fh';  // Replace this with your actual verification token
+const YOUR_VERIFY_TOKEN = '';  // Replace this with your actual verification token
 
 app.get('/', (req, res) => {
     res.send("sample webhook")
@@ -25,7 +25,7 @@ app.post('/webhook', async (req, res) => {
     try {
         console.log(req.body)
         // Replace with the URL of the API you want to call
-        const apiUrl = 'https://sixty-bats-roll.loca.lt/whatsapp/webhook';
+        const apiUrl = 'https://example.com/whatsapp/webhook';
 
         const apiResponse = await axios.post(apiUrl, data);
 
