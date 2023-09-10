@@ -21,6 +21,7 @@ app.get('/webhook', (req, res) => {
 app.post('/webhook', async (req, res) => {
     const data = req.body;
     try {
+        console.log(req.body)
         // Replace with the URL of the API you want to call
         const apiUrl = 'https://sixty-bats-roll.loca.lt/whatsapp/webhook';
 
