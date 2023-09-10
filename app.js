@@ -1,6 +1,7 @@
 const express = require('express');
 const axios = require("axios")
 const app = express();
+app.use(express.json())
 const port = process.env.PORT || 6001;  // You can choose any port you like
 
 const YOUR_VERIFY_TOKEN = 'mGIKzRBxY9xnwBp9Qra1fh';  // Replace this with your actual verification token
