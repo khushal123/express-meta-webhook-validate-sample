@@ -11,6 +11,7 @@ app.get('/', (req, res) => {
 
 
 app.get('/webhook', (req, res) => {
+    console.log(req.query)
     if (req.query['hub.verify_token'] === YOUR_VERIFY_TOKEN) {
         res.send(req.query['hub.challenge']);
     } else {
